@@ -7,7 +7,6 @@ export default {
     fetchCodeReviewResponse: async (lang, code) => {
       try
       {
-        // const response = await axios.post(`${SERVER_URL}/review`, {lang, code});
         const response = await axios.post(`${SERVER_URL}/v1/api/review`, {lang, code});
         return response.data;
       }

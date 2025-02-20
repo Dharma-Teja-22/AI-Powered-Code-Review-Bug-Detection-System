@@ -11,6 +11,7 @@ export default function CodeReviewSystem() {
   const [code, setCode] = useState("");
   const [result, setResult] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [isLoading, setISLoading]= useState(false);
 
   const schema = z.object({
     language: z.string().min(1, "Please select a language"),
@@ -73,11 +74,11 @@ export default function CodeReviewSystem() {
               </Select>
             </div>
           </div>
-          <CodeEditor code={code} setCode={setCode}  handleSubmit={handleSubmit} selectedLanguage={selectedLanguage}  handleClear={handleClear}/>
+          <CodeEditor code={code} setCode={setCode}  handleSubmit={handleSubmit} selectedLanguage={selectedLanguage}  handleClear={handleClear} isLoading={isLoading} setISLoading={setISLoading} />
         </div>
         <div className="space-y-4">
           <h2 className="text-2xl font-semibold">Review</h2>
-          <ReviewSection result={result} />
+          <ReviewSection result={result} isLoading={isLoading} setISLoading={setISLoading} />
         </div>
       </div>
       <ToastContainer />
