@@ -19,7 +19,7 @@ export default function CodeReviewSystem() {
 
   const handleClear = async () => {
     setCode("");
-    selectedLanguage("");
+    setSelectedLanguage("");
     setResult([]);
   };
 
