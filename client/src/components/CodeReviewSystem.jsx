@@ -78,7 +78,7 @@ export default function CodeReviewSystem() {
         </div>
         <div className="space-y-4">
           <h2 className="text-2xl font-semibold">Review</h2>
-          <ReviewSection result={result} isLoading={isLoading} setISLoading={setISLoading} />
+          <ReviewSection result={result} isLoading={isLoading} />
         </div>
       </div>
       <ToastContainer />
